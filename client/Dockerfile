@@ -6,6 +6,8 @@ WORKDIR /client
 
 COPY . .
 
+RUN apt-get install --no-install-recommends apt-utils --yes && apt-get install --no-install-recommends npm --yes
+
 RUN npm install
 
 RUN npm install webpack
