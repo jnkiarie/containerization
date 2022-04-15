@@ -1,4 +1,4 @@
-FROM node:17
+FROM node:17-alpine
 
 RUN mkdir /backend
 
@@ -6,8 +6,8 @@ WORKDIR /backend
 
 COPY . .
 
-RUN apt-get install --no-install-recommends apt-utils --yes && apt-get install --no-install-recommends npm --yes
-
 RUN npm install
+
+RUN npm i npm@latest -g
 
 CMD ["npm" "start"]
