@@ -8,6 +8,4 @@ COPY . .
 
 RUN npm install
 
-RUN npm i npm@latest -g
-
-CMD ["npm" "start"]
+CMD ["npm","start"]
