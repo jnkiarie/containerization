@@ -14,4 +14,4 @@ RUN npm install webpack
 
 EXPOSE 3000
 
-CMD ["npm" "start"]
+CMD ["npm","start"]
