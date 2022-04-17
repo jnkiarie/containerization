@@ -1,11 +1,15 @@
-FROM node:17-alpine
+FROM mongo-express
 
 RUN mkdir /backend
 
 WORKDIR /backend
 
-COPY . .
+COPY package-lock.json /backend/
+
+COPY package.json /backend/
 
 RUN npm install
+
+COPY . .
 
 CMD ["npm","start"]

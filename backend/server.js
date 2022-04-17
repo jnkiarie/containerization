@@ -23,6 +23,7 @@ db.once('open', ()=>{
 // Check for DB Errors
 db.on('error', (error)=>{
     console.log(error);
+    console.log('Testing Error')
 })
 
 // Initializing express
