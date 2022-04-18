@@ -4,23 +4,23 @@
     
 ### 2. Dockerfile directives used in the creation and running of each container.  
    - backend - Dockerfile  
-   FROM mongo-express - base image  
+    FROM mongo-express - base image  
 
-   - RUN mkdir /backend - create a folder in the container named backend  
+    RUN mkdir /backend - create a folder in the container named backend  
 
-   - WORKDIR /backend - make the /backend folder the working directory to execute the following commands  
+    WORKDIR /backend - make the /backend folder the working directory to execute the following commands  
 
-   - COPY package-lock.json /backend/ - copy the file to backend so as to guide the npm install on what packages to install  
+    COPY package-lock.json /backend/ - copy the file to backend so as to guide the npm install on what packages to install  
 
-   - COPY package.json /backend/ - copy the file to backend so as to guide the npm install on what packages to install    
+    COPY package.json /backend/ - copy the file to backend so as to guide the npm install on what packages to install    
 
-   - RUN npm install  - install the npm packages as guided by the json files   
+    RUN npm install  - install the npm packages as guided by the json files   
 
-   - COPY . . - Copy all directories in the base folder on backend to the base folder inside the container   
+    COPY . . - Copy all directories in the base folder on backend to the base folder inside the container   
 
-   - CMD ["npm","start"]  - start the app after running the container  
+    CMD ["npm","start"]  - start the app after running the container  
 
-    #### client-Dockerfile    
+    - client-Dockerfile    
      FROM node:12-alpine - base image required  
 
      RUN mkdir /client - create a client directory in the container  
