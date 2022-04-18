@@ -57,4 +57,7 @@ volumes:
    * Fork the repository on github  
    * git clone repository from github to local pc  
    * git add . - to add all the files we create to git repository frequently so as not to have a backlog of code to troubleshoot incase of any errors
+   * git commit -m '<explanation>'
+   * git push origin master
+   
 
