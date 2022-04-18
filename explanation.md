@@ -14,39 +14,39 @@
 
    COPY package.json /backend/ - copy the file to backend so as to guide the npm install on what packages to install    
 
-   RUN npm install  - install the npm packages as guided by the json files  
+   RUN npm install  - install the npm packages as guided by the json files   
 
-   COPY . . - Copy all directories in the base folder on backend to the base folder inside the container  
+   COPY . . - Copy all directories in the base folder on backend to the base folder inside the container   
 
    CMD ["npm","start"]  - start the app after running the container  
 
-  ii.) client-Dockerfile  
-  FROM node:12-alpine - base image required  
+    ii.) client-Dockerfile    
+     FROM node:12-alpine - base image required  
 
-  RUN mkdir /client - create a client directory in the container  
+     RUN mkdir /client - create a client directory in the container  
 
-  WORKDIR /client - make the client directory the working directory  
+     WORKDIR /client - make the client directory the working directory  
 
-  COPY . . - Copy all files in the base folder to the working directory in the container
+     COPY . . - Copy all files in the base folder to the working directory in the container  
 
-  RUN npm i npm@latest -g - install the latest npm package and make it global
+     RUN npm i npm@latest -g - install the latest npm package and make it global  
 
-  RUN npm install - install the npm modules required 
+     RUN npm install - install the npm modules required  
 
-  RUN npm install webpack - install webpack package
+     RUN npm install webpack - install webpack package  
 
-  EXPOSE 3000 - expose port 3000 outside the container
+     EXPOSE 3000 - expose port 3000 outside the container  
 
-  CMD ["npm","start"] - run the command after the container is created.  
+     CMD ["npm","start"] - run the command after the container is created.   
 
 3. Docker-compose Networking (Application port allocation and a bridge network implementation) where necessary.  
-    networks:  
-    my-network:  
-    driver: bridge  
+    networks:   
+    my-network:   
+    driver: bridge   
 
-   * Defined a bridge network on docker compose to allow for containers to communicate together  
-   * Exposed port 3000 for the localhost to 3000 for the client container so as to communicate with the browser outside the container  
-   * Exposed port 5000 for the localhost to 5000 for the client container so as to communicate with the browser outside the container  
+    * Defined a bridge network on docker compose to allow for containers to communicate together  
+    * Exposed port 3000 for the localhost to 3000 for the client container so as to communicate with the browser outside the container  
+    * Exposed port 5000 for the localhost to 5000 for the client container so as to communicate with the browser outside the container  
 
 4. Docker-compose volume definition and usage (where necessary).  
 
@@ -54,10 +54,10 @@ volumes:
   mongo-volume: - Defined a volume to persist the data incase we delete or exit the container the date will still be available if we run another container afterwards.  
 
 5. Git workflow used to achieve the task.  
-   * Fork the repository on github  
-   * git clone repository from github to local pc  
-   * git add . - to add all the files we create to git repository frequently so as not to have a backlog of code to troubleshoot incase of any errors
-   * git commit -m '<explanation>'
-   * git push origin master
-   
+    * Fork the repository on github  
+    * git clone repository from github to local pc  
+    * git add . - to add all the files we create to git repository frequently so as not to have a backlog of code to troubleshoot incase of any errors  
+    * git commit -m 'explanation'  
+    * git push origin master  
+
 
