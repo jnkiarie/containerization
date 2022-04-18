@@ -37,4 +37,24 @@
 
   EXPOSE 3000 - expose port 3000 outside the container
 
-  CMD ["npm","start"] - run the command after the container is created.
+  CMD ["npm","start"] - run the command after the container is created.  
+
+3. Docker-compose Networking (Application port allocation and a bridge network implementation) where necessary.  
+    networks:  
+    my-network:  
+    driver: bridge  
+
+   * Defined a bridge network on docker compose to allow for containers to communicate together  
+   * Exposed port 3000 for the localhost to 3000 for the client container so as to communicate with the browser outside the container  
+   * Exposed port 5000 for the localhost to 5000 for the client container so as to communicate with the browser outside the container  
+
+4. Docker-compose volume definition and usage (where necessary).  
+
+volumes:  
+  mongo-volume: - Defined a volume to persist the data incase we delete or exit the container the date will still be available if we run another container afterwards.  
+
+5. Git workflow used to achieve the task.  
+   * Fork the repository on github  
+   * git clone repository from github to local pc  
+   * git add . - to add all the files we create to git repository frequently so as not to have a backlog of code to troubleshoot incase of any errors
+
