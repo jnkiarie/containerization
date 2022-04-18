@@ -1,5 +1,5 @@
 1. Choice of the base image on which to build each container.  
-  i.) backend-image - This has been created with the mongo-express base image due to the apps use of the mongodb database
+  i.) backend-image - This has been created with the mongo-express base image due to the apps use of the mongodb database  
   ii.) client-image - This has been created with the node-alpine base image because the app is built on node platform and the alpine version is light which will make the built container to be light i.e less megabytes  
     
 2. Dockerfile directives used in the creation and running of each container.  
