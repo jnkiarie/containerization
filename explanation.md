@@ -3,7 +3,7 @@
   - client-image - This has been created with the node-alpine base image because the app is built on node platform and the alpine version is light which will make the    built container to be light i.e less megabytes  
     
 ### 2. Dockerfile directives used in the creation and running of each container.  
-   - backend - Dockerfile  
+   ### backend - Dockerfile  
    
     FROM mongo-express - base image  
 
@@ -20,8 +20,8 @@
     COPY . . - Copy all directories in the base folder on backend to the base folder inside the container   
 
     CMD ["npm","start"]  - start the app after running the container  
-
-    - client-Dockerfile 
+    
+###  client-Dockerfile 
     
      FROM node:12-alpine - base image required  
 
