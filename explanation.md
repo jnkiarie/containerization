@@ -56,6 +56,7 @@ volumes:
 5. Git workflow used to achieve the task.  
     * Fork the repository on github  
     * git clone repository from github to local pc  
+    * git init - On the parent folder so as to track all files and folders  
     * git add . - to add all the files we create to git repository frequently so as not to have a backlog of code to troubleshoot incase of any errors  
     * git commit -m 'explanation'  
     * git push origin master  
