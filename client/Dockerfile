@@ -1,4 +1,4 @@
-FROM node:12-alpine
+FROM node:14-alpine
 
 RUN mkdir /client
 
@@ -6,7 +6,7 @@ WORKDIR /client
 
 COPY . .
 
-RUN npm i npm@latest -g
+# RUN npm i npm@latest -g
 
 RUN npm install
 

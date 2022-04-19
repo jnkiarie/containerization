@@ -1,23 +1,25 @@
-# Requirements
-Make sure that you have the following installed:
-- [node](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04) 
-- npm 
-- [MongoDB](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/) and start the mongodb service with `sudo service mongod start`
+# IP-WEEK-2 - Containerization with Docker
 
-## Navigate to the Client Folder 
- `cd client`
+In this project we will use a Dockerfile and Docker-compose to build and run the containers to make the web app run on our browser   
+Build a basic microservice to run the app  
 
-## Run the folllowing command to install the dependencies 
- `npm install`
+Description  
+This is IP for week two part 2 at Moringa school  
+Below is the link to the website  
+https://github.com/jnkiarie/containerization 
 
-## Run the folllowing to start the app
- `npm start`
 
-## Open a new terminal and run the same commands in the backend folder
- `cd ../backend`
+Technologies Tested  
+MongoDB  
+Dockerfile   
+Docker-Compose  
+Networking and Port mapping  
 
- `npm install`
+Support and contact details  
+jimmyn.kiarie@gmail.com  
 
- `npm start`
+License  
+GNU General Public License v3.0  
 
- ### Go ahead a nd add a product (note that the price field only takes a numeric input)
+Contributor  
+Jimmy Njuguna Kiarie  

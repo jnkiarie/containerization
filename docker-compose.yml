@@ -41,7 +41,7 @@ services:
       - MONGO_INITDB_ROOT_USERNAME=root1
       - MONGO_INITDB_ROOT_PASSWORD=password
   ports:
-      - 27017:27017
+      - 27018:27018
   volumes:
       - mongo-volume:/data/db
   networks:
