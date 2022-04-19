@@ -49,6 +49,7 @@
     * Defined a bridge network on docker compose to allow for containers to communicate together  
     * Exposed port 3000 for the localhost to 3000 for the client container so as to communicate with the browser outside the container  
     * Exposed port 5000 for the localhost to 5000 for the client container so as to communicate with the browser outside the container  
+    * Docker Images Uploaded : jnkiarie/backend-image:v1.0.0 and jnkiarie/client-image:v1.0.0
 
 ### 4. Docker-compose volume definition and usage (where necessary).  
 
