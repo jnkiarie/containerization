@@ -1,4 +1,4 @@
-# IP-WEEK-2 - Containerization
+# IP-WEEK-2 - Containerization with Docker
 
 In this project we will use a Dockerfile and Docker-compose to build and run the containers to make the web app run on our browser   
 Build a basic microservice to run the app  
